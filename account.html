@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ 	<head>
+ 		<!-- Meta Tags -->
+		<meta charset="UTF-8">
+		<meta name="author" content="Kamran Mubarik">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Title -->
+ 		<title>Shopping Online Shop</title>
+ 		<!-- Style Sheet -->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<!-- Javascript -->	
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+ 	</head>
+<body>
+
+	<header>
+		<div class="container">
+			<div class="brand">
+				<div class="logo">
+					<a href="index.html">
+						<img src="img/icons/online_shopping.png">
+						<div class="logo-text">
+							<p class="big-logo">Shopping</p>
+							<p class="small-logo">Online Shop</p>
+						</div>
+					</a>
+				</div> <!-- logo -->
+				<div class="shop-icon">
+					<div class="dropdown">
+						<img src="img/icons/account.png">
+						<div class="dropdown-menu">
+							<ul>
+								<li><a href="account.html">Tài khoản</a></li>
+								<li><a href="orders.html">Đơn hàng</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="dropdown">
+						<img src="img/icons/heart.png">
+						<!-- <div class="dropdown-menu wishlist-item">
+							<table border="1">
+								<thead>
+									<tr>
+										<th>Image</th>
+										<th>Product Name</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><img src="img/product/img1.jpg"></td>
+										<td>product name</td>
+									</tr>
+									<tr>
+										<td><img src="img/product/img2.jpg"></td>
+										<td>product name</td>
+									</tr>
+								</tbody>
+							</table>
+						</div> -->
+					</div>
+					<div class="dropdown">
+						<img src="img/icons/shopping_cart.png">
+						<!-- <div class="dropdown-menu cart-item">
+							<table border="1">
+								<thead>
+									<tr>
+										<th>Image</th>
+										<th>Product Name</th>
+										<th class="center">Price</th>
+										<th class="center">Qty.</th>
+										<th class="center">Amount</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><img src="img/product/img1.jpg"></td>
+										<td>product name</td>
+										<td class="center">1200</td>
+										<td class="center">2</td>
+										<td class="center">2400</td>
+									</tr>
+									<tr>
+										<td><img src="img/product/img2.jpg"></td>
+										<td>product name</td>
+										<td class="center">1500</td>
+										<td class="center">2</td>
+										<td class="center">3000</td>
+									</tr>
+								</tbody>
+							</table>
+						</div> -->
+					</div>
+				</div> <!-- shop icons -->
+			</div> <!-- brand -->
+
+			<div class="menu-bar">
+				<div class="menu">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="shop.html">Shop</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<div class="search-bar">
+					<form>
+						<div class="form-group">
+							<input type="text" class="form-control" name="search" placeholder="Search">
+							<img src="img/icons/search.png">
+						</div>
+					</form>
+				</div>
+			</div> <!-- menu -->
+		</div> <!-- container -->
+	</header> <!-- header -->
+
+	<div class="container">
+		<main>
+			<div class="breadcrumb">
+				<ul>
+					<li><a href="index.html">Trang chủ</a></li>
+					<li> / </li>
+					<li>Tài khoản</li>
+				</ul>
+			</div> <!-- End of Breadcrumb-->
+			
+			<div class="account-page">
+				<div class="profile">
+					<div class="profile-img">
+						<img src="img/product/img5.jpg">
+						<h2>Tuấn Kiệt</h2>
+						<p>Tuaiet22@mail.com</p>
+					</div>
+					<ul>
+						<li><a href="account.html" class="active">Tài khoản <span>></span></a></li>
+						<li><a href="orders.html">Đơn hàng của tôi <span>></span></a></li>
+						<li><a href="change-password.html">Thay đổi mật khẩu <span>></span></a></li>
+						<li><a href="">Đăng xuất <span>></span></a></li>
+					</ul>
+				</div>
+				<div class="account-detail">
+					<h2>Tài khoản</h2>
+					<div class="billing-detail">					
+						<form class="checkout-form">
+							<div class="form-inline">
+								<div class="form-group">
+									<label>Họ</label>
+									<input type="text" id="fname" name="fname" value="Nguyễn">
+								</div>
+								<div class="form-group">
+									<label>Tên</label>
+									<input type="text" id="lname" name="lname" value="Kiệt">
+								</div>
+							</div>
+							<div class="form-group">
+								<label>Tên Công ty</label>
+								<input type="text" id="cname" name="cname">
+							</div>
+							<div class="form-inline">
+								<div class="form-group">
+									<label>Quốc gia</label>
+									<select id="country" name="country">
+										<option selected>---Chọn Quốc Gia---</option>
+										<option value="pakistan">Pakistan</option>
+										<option value="pakistan">Viet Nam</option>
+										<option value="pakistan">China</option>
+										<option value="pakistan">Italia</option>
+										<option value="pakistan">Japan</option>
+										<option value="pakistan">Other</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label>City</label>
+									<select id="city" name="city">
+										<option selected>---Chọn Thành phố---</option>
+										<option value="karachi">Hồ Chí Minh</option>
+										<option value="karachi">HongKong</option>
+										<option value="karachi">Other</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label>Địa chỉ</label>
+								<textarea style="resize:none" id="address" name="address" rows="3">Quận Bình Thạnh</textarea>
+							</div>
+							<div class="form-inline">					
+								<div class="form-group">
+									<label>SĐT</label>
+									<input type="text" id="tel" name="tel" minlength="11" maxlength="11" value="0928777111">
+								</div>
+								<div class="form-group">
+									<label>SĐT</label>
+									<input type="text" id="mobile" name="mobile" minlength="11" maxlength="11" value="0928777111">
+								</div>
+							</div>
+							<div class="form-group">
+								<label></label>
+								<input type="submit" id="update" name="update" value="Cập nhập">
+							</div>
+						</form>		
+					</div>
+				</div>				
+			</div>		
+		</main> <!-- Main Area -->
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="footer-widget">
+				<div class="widget">
+					<div class="widget-heading">
+						<h3>Liên kết quan trọng</h3>
+					</div>
+					<div class="widget-content">
+						<ul>
+							<li><a href="about.html">About</a></li>
+							<li><a href="contact.html">Liên hệ</a></li>
+							<li><a href="refund.html">Chính sách</a></li>
+							<li><a href="terms.html">Điều khoản và điều kiện</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="widget">
+					<div class="widget-heading">
+						<h3>Thông tin</h3>
+					</div>
+					<div class="widget-content">
+						<ul>
+							<li><a href="account.html">Tài khoản của tôi</a></li>
+							<li><a href="orders.html">Đơn hàng của tôi</a></li>
+							<li><a href="cart.html">Giỏ hàng</a></li>
+							<li><a href="checkout.html">Thanh toán</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="widget">
+					<div class="widget-heading">
+						<h3>Theo dõi chúng tôi</h3>
+					</div>
+					<div class="widget-content">
+						<div class="follow">
+							<ul>
+								<li><a href="#"><img src="img/icons/facebook.png"></a></li>
+								<li><a href="#"><img src="img/icons/twitter.png"></a></li>
+								<li><a href="#"><img src="img/icons/instagram.png"></a></li>
+							</ul>
+						</div>						
+					</div>
+					<div class="widget-heading">
+						<h3>Gửi phản hồi</h3>
+					</div>
+					<div class="widget-content">
+						<div class="subscribe">
+							<form>
+								<div class="form-group">
+									<input type="text" class="form-control" name="subscribe" placeholder="">
+									<img src="img/icons/paper_plane.png">
+								</div>
+							</form>
+						</div>						
+					</div>
+				</div>
+			</div> <!-- Footer Widget -->
+			<div class="footer-bar">
+				<div class="copyright-text">
+					<p>Copyright 2021 - All Rights Reserved</p>
+				</div>
+				<div class="payment-mode">
+					<img src="img/icons/paper_money.png">
+					<img src="img/icons/visa.png">
+					<img src="img/icons/mastercard.png">
+				</div>
+			</div> <!-- Footer Bar -->
+		</div>
+	</footer> <!-- Footer Area -->
+
+</body>
+
+</html>

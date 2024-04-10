@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ 	<head>
+ 		<!-- Meta Tags -->
+		<meta charset="UTF-8">
+		<meta name="author" content="Kamran Mubarik">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Title -->
+ 		<title>Shopping Online Shop</title>
+ 		<!-- Style Sheet -->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<!-- Javascript -->	
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<!-- FancyBox -->
+		<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
+
+		<!-- Optionally add helpers - button, thumbnail and/or media -->
+		<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js"></script>
+
+		<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+		<script>
+		$(document).ready(function(){		
+			$('.fancybox').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+		});
+
+  		</script>
+ 	</head>
+<body>
+
+	<header>
+		<div class="container">
+			<div class="brand">
+				<div class="logo">
+					<a href="index.html">
+						<img src="img/icons/online_shopping.png">
+						<div class="logo-text">
+							<p class="big-logo">Shopping</p>
+							<p class="small-logo">Online Shop</p>
+						</div>
+					</a>
+				</div> <!-- logo -->
+				<div class="shop-icon">
+					<div class="dropdown">
+						<img src="img/icons/account.png">
+						<div class="dropdown-menu">
+							<ul>
+								<li><a href="account.html">Tài khoản</a></li>
+								<li><a href="orders.html">Đơn hàng</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="dropdown">
+						<img src="img/icons/heart.png">
+						<!-- <div class="dropdown-menu wishlist-item">
+							<table border="1">
+								<thead>
+									<tr>
+										<th>Image</th>
+										<th>Product Name</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><img src="img/product/img1.jpg"></td>
+										<td>product name</td>
+									</tr>
+									<tr>
+										<td><img src="img/product/img2.jpg"></td>
+										<td>product name</td>
+									</tr>
+								</tbody>
+							</table> -->
+						</div>
+					</div>
+					<div class="dropdown">
+						<img src="img/icons/shopping_cart.png">
+						<!-- <div class="dropdown-menu cart-item">
+							<table border="1">
+								<thead>
+									<tr>
+										<th>Image</th>
+										<th>Product Name</th>
+										<th class="center">Price</th>
+										<th class="center">Qty.</th>
+										<th class="center">Amount</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><img src="img/product/img1.jpg"></td>
+										<td>product name</td>
+										<td class="center">1200</td>
+										<td class="center">2</td>
+										<td class="center">2400</td>
+									</tr>
+									<tr>
+										<td><img src="img/product/img2.jpg"></td>
+										<td>product name</td>
+										<td class="center">1500</td>
+										<td class="center">2</td>
+										<td class="center">3000</td>
+									</tr>
+								</tbody>
+							</table>
+						</div> -->
+					</div>
+				</div> <!-- shop icons -->
+			</div> <!-- brand -->
+
+			<div class="menu-bar">
+				<div class="menu">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="shop.html">Shop</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<div class="search-bar">
+					<form>
+						<div class="form-group">
+							<input type="text" class="form-control" name="search" placeholder="Search">
+							<img src="img/icons/search.png">
+						</div>
+					</form>
+				</div>
+			</div> <!-- menu -->
+		</div> <!-- container -->
+	</header> <!-- header -->
+
+	<div class="container">
+		<main>
+			<div class="breadcrumb">
+				<ul>
+					<li><a href="index.html">Trang chủ</a></li>
+					<li> / </li>
+					<li><a href="">Cửa hàng</a></li>
+					<li> / </li>
+					<li><a href="">Sản phẩm</a></li>
+				</ul>
+			</div> <!-- End of Breadcrumb-->
+
+			<div class="single-product">
+				<div class="images-section">
+					<div class="larg-img">
+						<img src="img/product/img1.jpg">
+					</div>
+					<div class="small-img">
+						<a class="fancybox" rel="group" href="img/product/img2.jpg">
+							<img src="img/product/img2.jpg">
+						</a>
+						<a class="fancybox" rel="group" href="img/product/img3.jpg">
+							<img src="img/product/img3.jpg">
+						</a>
+						<a class="fancybox" rel="group" href="img/product/img4.jpg">
+							<img src="img/product/img4.jpg">
+						</a>
+						<a class="fancybox" rel="group" href="img/product/img5.jpg">
+							<img src="img/product/img5.jpg">
+						</a>
+					</div>
+				</div> <!-- End of Images Section-->
+
+				<div class="product-detail">
+					<div class="product-name">
+						<h2>Đồng hồ Gray Color</h2>
+					</div>
+					<div class="product-price">
+						<h3>3,000,000 VNĐ/-</h3>
+					</div>
+					<hr>
+					<div class="product-description">
+						<p>Tên sản phẩm: Đồng hồ cơ xám</p>
+					</div>
+					<hr>
+					<div class="product-cart">
+						<form id="cart-form">
+							<div class="form-group">
+								<input type="number" class="cart-number" name="cartNumber" value="1" min="1" max="10">
+								<input type="submit" name="addToCart" value="Thêm vào giỏ hàng">
+							</div>
+						</form>
+						<form id="wishlist-form">
+							<div class="form-group">
+								<input type="checkbox" class="wishlist" name="wishlist"> Thêm vào danh sách yêu thích
+							</div>
+						</form>
+					</div>
+					<hr>
+					<div class="product-meta">
+						<p><b>Loại sản phẩm: </b> Sản phẩm</p>
+						<p><b>Chia sẻ sản phẩm này: </b> Facebook, Twitter</p>
+					</div>
+				</div> <!-- End of Product Detail-->
+			</div>
+			<hr>
+			<div class="product-long-description">
+				<h3>Giới thiệu sản phẩm</h3>
+				<p>
+				+ Chức năng: Ngoài chức năng hiển thị thời gian, đồng hồ có thể đi kèm với các tính năng bổ sung như lịch ngày hoặc lịch tuần. 
+				</p>
+				<p>
+				+ Độ chống nước: Mức độ chống nước của đồng hồ cơ xám có thể được điều chỉnh tùy thuộc vào mục đích sử dụng, từ chống nước thông thường cho việc sử dụng hàng ngày đến chống nước cao cấp cho các hoạt động thể thao hoặc điều kiện môi trường khắc nghiệt 
+				</p>
+				<p>
+				+ Dây đeo: Dây đeo của đồng hồ có thể làm từ da, thép không gỉ hoặc vật liệu cao cấp khác, mang lại sự thoải mái và bền bỉ khi sử dụng. 
+				</p>
+				<p>
+				+ Mặt số: Mặt số của đồng hồ được thiết kế đơn giản nhưng sang trọng, với các chỉ số hoặc dấu giờ được làm rõ nổi bật, giúp dễ dàng đọc thời gian ngay cả trong điều kiện ánh sáng yếu.
+				</p>
+			</div>
+			<hr>
+			<div class="new-product-section">
+				<div class="product-section-heading">
+					<h2>Đề xuất sản phẩm  <img src="img/icons/good_quality.png"></h2>
+					<h3>SẢN PHẨM TỐT NHẤT CỦA CHÚNG TÔI ĐƯỢC ĐỀ XUẤT CHO BẠN</h3>
+				</div>
+				<div class="product-content">
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/img1.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>Nam / Đồng hồ</h3>
+							<h2>Đồng hồ Gray Color</h2>
+							<a href="#">Thêm vào giỏ hàng</a>
+							<p>3,000,000 VNĐ/-</p>
+						</div>							
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/img2.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>Nam / Quần</h3>
+							<h2>Quần Jean levi's</h2>
+							<a href="#">Thêm vào giỏ hàng</a>
+							<p>150,000 VNĐ/-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/img3.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>Nam / Đồng hồ</h3>
+							<h2>Đồng hồ Nam Black</h2>
+							<a href="#">Thêm vào giỏ hàng</a>
+							<p>3,500,000 VNĐ/-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/img4.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>Nam / Giày</h3>
+							<h2>Giày Nick Black</h2>
+							<a href="#">Thêm vào giỏ hàng</a>
+							<p>450,000 VNĐ/-</p>
+						</div>
+					</div>
+				</div>
+			</div> <!-- Recommend Product Section -->
+		</main> <!-- Main Area -->
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="footer-widget">
+				<div class="widget">
+					<div class="widget-heading">
+						<h3>Liên kết quan trọng</h3>
+					</div>
+					<div class="widget-content">
+						<ul>
+							<li><a href="about.html">About</a></li>
+							<li><a href="contact.html">Liên hệ</a></li>
+							<li><a href="refund.html">Chính sách</a></li>
+							<li><a href="terms.html">Điều khoản và điều kiện</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="widget">
+					<div class="widget-heading">
+						<h3>Thông tin</h3>
+					</div>
+					<div class="widget-content">
+						<ul>
+							<li><a href="account.html">Tài khoản của tôi</a></li>
+							<li><a href="orders.html">Đơn hàng của tôi</a></li>
+							<li><a href="cart.html">Giỏ hàng</a></li>
+							<li><a href="checkout.html">Thanh toán</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="widget">
+					<div class="widget-heading">
+						<h3>Theo dõi chúng tôi</h3>
+					</div>
+					<div class="widget-content">
+						<div class="follow">
+							<ul>
+								<li><a href="#"><img src="img/icons/facebook.png"></a></li>
+								<li><a href="#"><img src="img/icons/twitter.png"></a></li>
+								<li><a href="#"><img src="img/icons/instagram.png"></a></li>
+							</ul>
+						</div>						
+					</div>
+					<div class="widget-heading">
+						<h3>Gửi phản hồi</h3>
+					</div>
+					<div class="widget-content">
+						<div class="subscribe">
+							<form>
+								<div class="form-group">
+									<input type="text" class="form-control" name="subscribe" placeholder="">
+									<img src="img/icons/paper_plane.png">
+								</div>
+							</form>
+						</div>						
+					</div>
+				</div>
+			</div> <!-- Footer Widget -->
+			<div class="footer-bar">
+				<div class="copyright-text">
+					<p>Copyright 2021 - All Rights Reserved</p>
+				</div>
+				<div class="payment-mode">
+					<img src="img/icons/paper_money.png">
+					<img src="img/icons/visa.png">
+					<img src="img/icons/mastercard.png">
+				</div>
+			</div> <!-- Footer Bar -->
+		</div>
+	</footer> <!-- Footer Area -->
+
+</body>
+
+</html>
